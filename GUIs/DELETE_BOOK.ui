@@ -80,7 +80,7 @@ COLOR: WHITE
     <property name="font">
      <font>
       <family>Times New Roman</family>
-      <pointsize>30</pointsize>
+      <pointsize>23</pointsize>
      </font>
     </property>
     <property name="text">

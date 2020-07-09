@@ -25,7 +25,7 @@ font-family: Times New Roman
      <rect>
       <x>140</x>
       <y>30</y>
-      <width>331</width>
+      <width>401</width>
       <height>51</height>
      </rect>
     </property>
@@ -78,7 +78,7 @@ font-family: Times New Roman
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>16</pointsize>
+       <pointsize>10</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -143,7 +143,7 @@ QToolButton:pressed {
     <widget class="QLineEdit" name="txtcheckname">
      <property name="geometry">
       <rect>
-       <x>160</x>
+       <x>170</x>
        <y>20</y>
        <width>111</width>
        <height>21</height>
@@ -152,7 +152,7 @@ QToolButton:pressed {
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>16</pointsize>
+       <pointsize>10</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -177,7 +177,7 @@ QToolButton:pressed {
        <x>130</x>
        <y>20</y>
        <width>59</width>
-       <height>16</height>
+       <height>21</height>
       </rect>
      </property>
      <property name="font">
@@ -209,9 +209,45 @@ color:white</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">COLOR: WHITE;
-BORDER: 1px solid white;
-font-family: Times New Roman</string>
+     <string notr="true">
+
+
+QWidget {
+    background-color: black;
+    color: #fffff8;
+	font-family:Times New Roman;
+}
+
+QHeaderView::section {
+    background-color: black;
+	padding: 4px;
+	font-size:10pt;
+	 border: 1px solid white;
+   
+    
+}
+
+QTableWidget {
+    gridline-color: white;
+  	font-size:12pt;
+}
+
+QTableWidget QTableCornerButton::section {
+    background-color: black;
+    border: 1px solid white
+;
+}
+
+QTableWidget {
+    gridline-color: white;
+  	font-size:12pt;
+}
+
+QTableWidget QTableCornerButton::section {
+    background-color: black;
+    border: 1px solid white
+;
+}</string>
     </property>
     <property name="frameShadow">
      <enum>QFrame::Sunken</enum>
@@ -312,7 +348,7 @@ font-family: Times New Roman</string>
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>13</pointsize>
+       <pointsize>10</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -380,7 +416,7 @@ QToolButton:pressed {
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>13</pointsize>
+       <pointsize>10</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>

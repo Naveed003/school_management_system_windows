@@ -22,9 +22,9 @@ font-family: Times New Roman
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>40</y>
-      <width>261</width>
+      <x>100</x>
+      <y>30</y>
+      <width>351</width>
       <height>61</height>
      </rect>
     </property>
@@ -69,8 +69,34 @@ font-family: Times New Roman
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">COLOR: WHITE;
-BORDER: black;</string>
+      <string notr="true">QTableWidget{
+	border: 1px solid white;
+}
+
+QWidget {
+    background-color: black;
+    color: WHITE;
+}
+
+QHeaderView::section {
+    background-color: black;
+	padding: 4px;
+	font-size:11pt;
+	 border: 1px solid WHITE;
+   
+    
+}
+
+QTableWidget {
+    gridline-color: WHITE;
+  	font-size:12pt;
+}
+
+QTableWidget QTableCornerButton::section {
+    background-color: black;
+    border: 1px solid white
+;
+}</string>
      </property>
      <column>
       <property name="text">
@@ -104,7 +130,7 @@ BORDER: black;</string>
      <rect>
       <x>80</x>
       <y>120</y>
-      <width>101</width>
+      <width>141</width>
       <height>21</height>
      </rect>
     </property>

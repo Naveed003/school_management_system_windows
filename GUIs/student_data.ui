@@ -83,7 +83,7 @@ QToolButton:pressed {
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>20</pointsize>
+       <pointsize>15</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -108,7 +108,7 @@ QToolButton:pressed {
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>20</pointsize>
+       <pointsize>15</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -133,7 +133,7 @@ QToolButton:pressed {
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>16</pointsize>
+       <pointsize>15</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -158,7 +158,7 @@ QToolButton:pressed {
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>20</pointsize>
+       <pointsize>15</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -183,7 +183,7 @@ QToolButton:pressed {
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>20</pointsize>
+       <pointsize>15</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -262,7 +262,7 @@ BACKGROUND: </string>
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>20</pointsize>
+       <pointsize>15</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -303,7 +303,7 @@ BACKGROUND: </string>
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>20</pointsize>
+       <pointsize>15</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -328,7 +328,7 @@ BACKGROUND: </string>
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>17</pointsize>
+       <pointsize>15</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -680,7 +680,8 @@ QToolButton:pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QWidget {
+     <string notr="true">
+QWidget {
     background-color: black;
     color: #fffff8;
 }
@@ -808,6 +809,28 @@ QToolButton:pressed {
      <string>SHOW STUDENT</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>110</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">COLOR: WHITE</string>
+    </property>
+    <property name="text">
+     <string> STUDENT DETAILS </string>
+    </property>
+   </widget>
    <zorder>frame</zorder>
    <zorder>label_7</zorder>
    <zorder>btnshowall</zorder>
@@ -815,6 +838,7 @@ QToolButton:pressed {
    <zorder>studtable</zorder>
    <zorder>btn_return</zorder>
    <zorder>btnShowStudent</zorder>
+   <zorder>label_10</zorder>
   </widget>
  </widget>
  <resources/>

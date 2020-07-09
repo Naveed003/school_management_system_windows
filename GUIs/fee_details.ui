@@ -23,9 +23,9 @@ font-family: Times New Roman
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>120</x>
       <y>30</y>
-      <width>331</width>
+      <width>401</width>
       <height>51</height>
      </rect>
     </property>
@@ -42,7 +42,7 @@ font-family: Times New Roman
      <string notr="true">COLOR: WHITE;</string>
     </property>
     <property name="text">
-     <string>FEE DEPOSIT</string>
+     <string>FEE DETAILS</string>
     </property>
    </widget>
    <widget class="QFrame" name="frame">
@@ -78,7 +78,7 @@ font-family: Times New Roman
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>16</pointsize>
+       <pointsize>13</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -146,7 +146,7 @@ QToolButton:pressed {
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>16</pointsize>
+       <pointsize>13</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -176,8 +176,45 @@ QToolButton:pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">COLOR: WHITE;
-border: 1px solid white</string>
+     <string notr="true">
+
+
+QWidget {
+    background-color: black;
+    color: #fffff8;
+	font-family:Times New Roman;
+}
+
+QHeaderView::section {
+    background-color: black;
+	padding: 4px;
+	font-size:10pt;
+	 border: 1px solid white;
+   
+    
+}
+
+QTableWidget {
+    gridline-color: white;
+  	font-size:12pt;
+}
+
+QTableWidget QTableCornerButton::section {
+    background-color: black;
+    border: 1px solid white
+;
+}
+
+QTableWidget {
+    gridline-color: white;
+  	font-size:12pt;
+}
+
+QTableWidget QTableCornerButton::section {
+    background-color: black;
+    border: 1px solid white
+;
+}</string>
     </property>
     <column>
      <property name="text">

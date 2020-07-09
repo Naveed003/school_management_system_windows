@@ -22,9 +22,9 @@ font-family: Times New Roman
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>20</y>
-      <width>251</width>
+      <x>90</x>
+      <y>30</y>
+      <width>331</width>
       <height>61</height>
      </rect>
     </property>

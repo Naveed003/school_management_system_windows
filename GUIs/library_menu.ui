@@ -23,9 +23,9 @@ font-family: Times New Roman
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>50</y>
-      <width>361</width>
+      <x>20</x>
+      <y>40</y>
+      <width>471</width>
       <height>61</height>
      </rect>
     </property>
@@ -79,7 +79,7 @@ font-family: Times New Roman
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>18</pointsize>
+       <pointsize>15</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -113,7 +113,7 @@ QPushButton:pressed {
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>18</pointsize>
+       <pointsize>15</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -147,7 +147,7 @@ QPushButton:pressed {
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>18</pointsize>
+       <pointsize>15</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -178,7 +178,7 @@ QPushButton:pressed {
      <rect>
       <x>50</x>
       <y>130</y>
-      <width>111</width>
+      <width>151</width>
       <height>21</height>
      </rect>
     </property>
@@ -228,7 +228,7 @@ QPushButton:pressed {
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>18</pointsize>
+       <pointsize>15</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -262,7 +262,7 @@ QPushButton:pressed {
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>18</pointsize>
+       <pointsize>15</pointsize>
        <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
@@ -296,7 +296,10 @@ QPushButton:pressed {
      <property name="font">
       <font>
        <family>Times New Roman</family>
-       <pointsize>18</pointsize>
+       <pointsize>15</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
       </font>
      </property>
      <property name="styleSheet">
@@ -324,7 +327,7 @@ QPushButton:pressed {
      <rect>
       <x>50</x>
       <y>260</y>
-      <width>71</width>
+      <width>91</width>
       <height>21</height>
      </rect>
     </property>

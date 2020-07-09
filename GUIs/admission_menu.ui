@@ -24,7 +24,7 @@ font-family: Times New Roman;
      <rect>
       <x>380</x>
       <y>160</y>
-      <width>611</width>
+      <width>601</width>
       <height>331</height>
      </rect>
     </property>
@@ -164,14 +164,14 @@ QToolButton:pressed {
      <rect>
       <x>60</x>
       <y>150</y>
-      <width>161</width>
+      <width>151</width>
       <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Times New Roman</family>
-      <pointsize>18</pointsize>
+      <pointsize>13</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -179,7 +179,7 @@ QToolButton:pressed {
 </string>
     </property>
     <property name="text">
-     <string>STUDENT DETAILS</string>
+     <string> STUDENT DETAILS </string>
     </property>
    </widget>
    <widget class="QLabel" name="label_7">
