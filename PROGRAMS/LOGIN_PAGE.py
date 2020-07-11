@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'GUIs/LOGIN_PAGE.ui'
@@ -12,14 +13,107 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_Login_page(object):
+=======
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+import mysql.connector
+
+
+class Ui_Login_page(object):
+    def ShowMessageBox(self, title, message):
+        self.mydb.close()
+        msgbox = QtWidgets.QMessageBox()
+        msgbox.setIcon(QtWidgets.QMessageBox.Information)
+        msgbox.setWindowTitle(title)
+        msgbox.setText(message)
+        msgbox.exec_()
+
+    def ShowMessageBox_(self, title, message):
+        msgbox = QtWidgets.QMessageBox()
+        msgbox.setIcon(QtWidgets.QMessageBox.Warning)
+        msgbox.setWindowTitle(title)
+        msgbox.setText(message)
+        msgbox.exec_()
+
+    def cleartxt(self):
+        self.txtusername.clear()
+        self.txtpass.clear()
+
+    def login(self):
+        self.mydb = mysql.connector.connect(
+            host='localhost', user='root', passwd='logon@123', database="school_management_system")
+        self.mycursor = self.mydb.cursor()
+        temp_username = self.txtusername.text()
+        temp_password = self.txtpass.text()
+        checklist = [temp_username.lower(), temp_password]
+        if temp_username == "" or temp_password == "":
+            self.ShowMessageBox_(
+                "FAILED", "ENTER USERNAME/EMAIL ID AND PASSWORD")
+            return
+        else:
+            if "@" in temp_username:
+                email_query = "select email_id,password from users where email_id='{}'".format(
+                    temp_username)
+                self.mycursor.execute(email_query)
+                email_id = self.mycursor.fetchall()
+                if email_id == []:
+                    self.ShowMessageBox_(
+                        "LOGIN FAILEd", "The email id you entered doesn't belong to an account. Please check your email id and try again.".upper())
+                    self.cleartxt()
+                    return
+                else:
+                    list = []
+                    for i in email_id:
+                        for j in i:
+                            list.append(j)
+                    if checklist == list:
+                        self.ShowMessageBox("SUCCESSFULL", "LOGIN SUCCESSFULL")
+
+                    else:
+                        self.ShowMessageBox_(
+                            "LOGIN FAILED", "INCORRECT EMAIL ID OR PASSWORD")
+                        self.cleartxt()
+                        return
+
+            else:
+                query = "select username,password from users where username='{}'".format(
+                    temp_username)
+                self.mycursor.execute(query)
+                username = self.mycursor.fetchall()
+                if username == []:
+                    self.ShowMessageBox_(
+                        "LOGIN FAILED", "The USERNAME you entered doesn't belong to an account. Please check your username and try again.".upper())
+                    self.cleartxt()
+                    return
+                else:
+                    list = []
+                    for i in username:
+                        for j in i:
+                            list.append(j)
+                    if checklist == list:
+                        self.ShowMessageBox("SUCCESSFULL", "LOGIN SUCCESSFULL")
+                    else:
+                        self.ShowMessageBox_(
+                            "LOGIN FAILED", "INCORRECT USERNAME OR PASSWORD")
+                        self.cleartxt()
+                        return
+
+>>>>>>> 55e2ba4d0146ed1c3cdbf32b41103096fb482bea
     def setupUi(self, Login_page):
         Login_page.setObjectName("Login_page")
         Login_page.resize(447, 413)
         Login_page.setStyleSheet("background-color: rgb(8, 8, 8);\n"
+<<<<<<< HEAD
 "font-family: Times New Roman\n"
 "\n"
 "\n"
 "")
+=======
+                                 "font-family: Times New Roman\n"
+                                 "\n"
+                                 "\n"
+                                 "")
+>>>>>>> 55e2ba4d0146ed1c3cdbf32b41103096fb482bea
         self.centralwidget = QtWidgets.QWidget(Login_page)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
@@ -41,12 +135,21 @@ class Ui_Login_page(object):
         font.setWeight(50)
         self.txtusername.setFont(font)
         self.txtusername.setStyleSheet("QLineEdit {\n"
+<<<<<<< HEAD
 "    border: 2px solid gray;\n"
 "    border-radius: 10px;\n"
 "    padding: 0 8px;\n"
 "    background: white;\n"
 "    selection-background-color: darkgray;\n"
 "}")
+=======
+                                       "    border: 2px solid gray;\n"
+                                       "    border-radius: 10px;\n"
+                                       "    padding: 0 8px;\n"
+                                       "    background: white;\n"
+                                       "    selection-background-color: darkgray;\n"
+                                       "}")
+>>>>>>> 55e2ba4d0146ed1c3cdbf32b41103096fb482bea
         self.txtusername.setText("")
         self.txtusername.setObjectName("txtusername")
         self.txtpass = QtWidgets.QLineEdit(self.centralwidget)
@@ -58,6 +161,7 @@ class Ui_Login_page(object):
         font.setWeight(50)
         self.txtpass.setFont(font)
         self.txtpass.setStyleSheet("QLineEdit {\n"
+<<<<<<< HEAD
 "    border: 2px solid gray;\n"
 "    border-radius: 10px;\n"
 "    padding: 0 8px;\n"
@@ -68,6 +172,18 @@ class Ui_Login_page(object):
 "QLineEdit[echoMode=\"1\"] {\n"
 "    lineedit-password-character: 9679;\n"
 "}")
+=======
+                                   "    border: 2px solid gray;\n"
+                                   "    border-radius: 10px;\n"
+                                   "    padding: 0 8px;\n"
+                                   "    background: white;\n"
+                                   "    selection-background-color: darkgray;\n"
+                                   "}\n"
+                                   "\n"
+                                   "QLineEdit[echoMode=\"1\"] {\n"
+                                   "    lineedit-password-character: 9679;\n"
+                                   "}")
+>>>>>>> 55e2ba4d0146ed1c3cdbf32b41103096fb482bea
         self.txtpass.setText("")
         self.txtpass.setEchoMode(QtWidgets.QLineEdit.Password)
         self.txtpass.setObjectName("txtpass")
@@ -81,6 +197,7 @@ class Ui_Login_page(object):
         font.setWeight(50)
         self.btn_login.setFont(font)
         self.btn_login.setStyleSheet("QPushButton { \n"
+<<<<<<< HEAD
 "    background-color: #33ff39;\n"
 "    border: 2px;\n"
 "    border-radius: 10px;\n"
@@ -91,6 +208,19 @@ class Ui_Login_page(object):
 "                                      stop: 0 #dadbde, stop: 1 #f6f7fa);}\n"
 "")
         self.btn_login.setObjectName("btn_login")
+=======
+                                     "    background-color: #33ff39;\n"
+                                     "    border: 2px;\n"
+                                     "    border-radius: 10px;\n"
+                                     "                    \n"
+                                     " }\n"
+                                     "QPushButton:pressed {\n"
+                                     "    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+                                     "                                      stop: 0 #dadbde, stop: 1 #f6f7fa);}\n"
+                                     "")
+        self.btn_login.setObjectName("btn_login")
+        self.btn_login.clicked.connect(self.login)
+>>>>>>> 55e2ba4d0146ed1c3cdbf32b41103096fb482bea
         self.btn_new_user = QtWidgets.QPushButton(self.centralwidget)
         self.btn_new_user.setGeometry(QtCore.QRect(110, 340, 231, 41))
         font = QtGui.QFont()
@@ -101,6 +231,7 @@ class Ui_Login_page(object):
         font.setWeight(50)
         self.btn_new_user.setFont(font)
         self.btn_new_user.setStyleSheet("QPushButton { \n"
+<<<<<<< HEAD
 "    background-color: #33ff39;\n"
 "    border: 2px;\n"
 "    border-radius: 10px;\n"
@@ -110,6 +241,17 @@ class Ui_Login_page(object):
 "QPushButton:pressed {\n"
 "    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
 "                                      stop: 0 #dadbde, stop: 1 #f6f7fa);}")
+=======
+                                        "    background-color: #33ff39;\n"
+                                        "    border: 2px;\n"
+                                        "    border-radius: 10px;\n"
+                                        "                    \n"
+                                        " }\n"
+                                        "\n"
+                                        "QPushButton:pressed {\n"
+                                        "    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+                                        "                                      stop: 0 #dadbde, stop: 1 #f6f7fa);}")
+>>>>>>> 55e2ba4d0146ed1c3cdbf32b41103096fb482bea
         self.btn_new_user.setObjectName("btn_new_user")
         Login_page.setCentralWidget(self.centralwidget)
 
@@ -119,9 +261,18 @@ class Ui_Login_page(object):
     def retranslateUi(self, Login_page):
         _translate = QtCore.QCoreApplication.translate
         Login_page.setWindowTitle(_translate("Login_page", "MainWindow"))
+<<<<<<< HEAD
         self.label.setText(_translate("Login_page", "<html><head/><body><p><span style=\" color:#ffffff;\">LOGIN</span></p></body></html>"))
         self.txtusername.setPlaceholderText(_translate("Login_page", "ENTER USERNAME/EMAIL ID"))
         self.txtpass.setPlaceholderText(_translate("Login_page", "ENTER PASSWORD"))
+=======
+        self.label.setText(_translate(
+            "Login_page", "<html><head/><body><p><span style=\" color:#ffffff;\">LOGIN</span></p></body></html>"))
+        self.txtusername.setPlaceholderText(
+            _translate("Login_page", "ENTER USERNAME/EMAIL ID"))
+        self.txtpass.setPlaceholderText(
+            _translate("Login_page", "ENTER PASSWORD"))
+>>>>>>> 55e2ba4d0146ed1c3cdbf32b41103096fb482bea
         self.btn_login.setText(_translate("Login_page", "LOGIN"))
         self.btn_new_user.setText(_translate("Login_page", "NEW-USER"))
 
