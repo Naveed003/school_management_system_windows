@@ -185,9 +185,9 @@ QToolButton:pressed {
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>210</x>
       <y>20</y>
-      <width>431</width>
+      <width>561</width>
       <height>91</height>
      </rect>
     </property>
