@@ -16,10 +16,10 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(456, 350)
         MainWindow.setStyleSheet("background-color: rgb(8, 8, 8);\n"
-                                 "font-family: Times New Roman;\n"
-                                 "COLOR: WHITE\n"
-                                 "\n"
-                                 "")
+"font-family: Times New Roman;\n"
+"COLOR: WHITE\n"
+"\n"
+"")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
@@ -47,10 +47,10 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "ABOUT"))
         self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-                                            "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-                                            "p, li { white-space: pre-wrap; }\n"
-                                            "</style></head><body style=\" font-family:\'Times New Roman\'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
-                                            "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">THE PROJECT TITLED &quot;SCHOOL MANAGMENT SYSTEM&quot; IS MANAGMENT SOFTWARE FOR MONITORING SCHOOL.THIS PROJECT IS IS DESIGNED AND CODED IN IDLE AND DATABASE MANAGEMENT IS HANDLED BY MySQL.THIS SOFTWARE MAINLY FOCUSES ON BASIC OPERATIONS RELATED TO ADMISSION LIKE ADDING A STUDENY, DELETING A STUDENT, MODIFYING A STUDENT AND OPERATIONS RELATED TO FEES AND LINRARY MANAGEMENT. &quot;SCHOOL MANAGEMENT SYSTEM&quot; IS A PYTHON APPLICATION WRITTEN ON A macOS. &quot;SCHOOL MANAGEMENT SYSTEM&quot; SUPPORTS TWO OPERATING SYSTEM THAT IS macOS AND WINDOWS. THIS SOFTWARE IS EASY TO USE FOR BOTH BEGINNERS AND ADVANCED USERS. </p></body></html>"))
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'Times New Roman\'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">THE PROJECT TITLED &quot;SCHOOL MANAGMENT SYSTEM&quot; IS MANAGMENT SOFTWARE FOR MONITORING SCHOOL.THIS PROJECT IS IS DESIGNED AND CODED IN IDLE AND DATABASE MANAGEMENT IS HANDLED BY MySQL.THIS SOFTWARE MAINLY FOCUSES ON BASIC OPERATIONS RELATED TO ADMISSION LIKE ADDING A STUDENY, DELETING A STUDENT, MODIFYING A STUDENT AND OPERATIONS RELATED TO FEES AND LINRARY MANAGEMENT. &quot;SCHOOL MANAGEMENT SYSTEM&quot; IS A PYTHON APPLICATION WRITTEN ON A macOS. &quot;SCHOOL MANAGEMENT SYSTEM&quot; SUPPORTS TWO OPERATING SYSTEM THAT IS macOS AND WINDOWS. THIS SOFTWARE IS EASY TO USE FOR BOTH BEGINNERS AND ADVANCED USERS. </p></body></html>"))
 
 
 if __name__ == "__main__":

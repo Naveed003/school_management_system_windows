@@ -284,6 +284,9 @@ BACKGROUND: </string>
        <height>22</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;</string>
+     </property>
      <property name="minimum">
       <number>3</number>
      </property>
@@ -495,6 +498,11 @@ color: white
      </property>
      <item>
       <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
        <string>A</string>
       </property>
      </item>
@@ -548,6 +556,11 @@ color: white
 color: white
 </string>
      </property>
+     <item>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
      <item>
       <property name="text">
        <string>KG-1</string>

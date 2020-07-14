@@ -2,6 +2,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sqlite3
+import mysql.connector
 
 class Ui_Login_page(object):
     def switchwin(self,win):
@@ -32,7 +33,7 @@ class Ui_Login_page(object):
         self.txtpass.clear()
 
     def login(self):
-        self.mydb = sqlite3.connect("database.db")
+        self.mydb = mysql.connector.connect(host="localhost",user="root",password="logon@123",database="school_management_system")
         self.mycursor = self.mydb.cursor()
         temp_username = self.txtusername.text()
         temp_password = self.txtpass.text()
@@ -89,7 +90,7 @@ class Ui_Login_page(object):
                         self.cleartxt()
                         return
     def setupUi(self, Login_page):
-        self.mydb =sqlite3.connect("database.db")
+        self.mydb =mysql.connector.connect(host="localhost",user="root",password="logon@123",database="school_management_system")
         self.mycursor = self.mydb.cursor()
         Login_page.setObjectName("Login_page")
         Login_page.resize(447, 413)
@@ -247,7 +248,7 @@ class Ui_Signup_Page(object):
         self.username=str(self.txtusername.text().lower())
         self.password=self.txtpass.text()
         self.confpass=self.txtconfirmpass.text()
-        self.mydb=sqlite3.connect("database.db")
+        self.mydb=mysql.connector.connect(host="localhost",user="root",password="logon@123",database="school_management_system")
         self.mycursor=self.mydb.cursor()
         self.mycursor.execute("select * from users")
         res=self.mycursor.fetchall()
@@ -445,7 +446,7 @@ class Ui_MAIN_MENU(object):
         self.ShowMessageBox("THANK YOU","THANK YOU FOR USING OUR APP")
         sys.exit()
     def setupUi(self, MAIN_MENU):
-        self.mydb=sqlite3.connect("database.db")
+        self.mydb=mysql.connector.connect(host="localhost",user="root",password="logon@123",database="school_management_system")
         self.mycusor=self.mydb.cursor()
         MAIN_MENU.setObjectName("MAIN_MENU")
         MAIN_MENU.resize(512, 336)
